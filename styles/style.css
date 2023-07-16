@@ -18,6 +18,10 @@ header{
   background: rgba(255, 144, 14, 0.10);
   padding: 30px 240px;
 }
+main{
+  max-width: 1440px;
+  margin:70px auto;
+}
 /* finished header styles */
 /* start header styles */
 nav{
@@ -63,10 +67,7 @@ nav li a{
 }
 /* finish banner section */
 /* main section styles */
-main{
-  max-width: 1440px;
-  margin:70px auto;
-}
+
 /* finish main section area */
 /* teams styles start */
 .teams-container{
@@ -99,7 +100,64 @@ main{
 }
 /* finish teams features area */
 /* start features area */
-
+.features{
+  margin-top: 130px;
+  display: flex;
+  gap: 100px;
+}
+.features-title{
+  color: #131313;
+  font-size: 2.8rem;
+  font-weight: 700;
+  border-left: 5px solid #FF900E;
+  padding-left: 20px;
+}
+.features-description{
+  color: #727272;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.features-content .card{
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
+.features-content .card .card-heading{
+  color:  #131313;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.features-content .card .card-title{
+  color:  #727272;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.features-img img{
+  height: 70%;
+  margin-left: 100px;
+}
+.ten-years-badge{
+  border-radius: 8px;
+  background: #FF900E; 
+  color: #FFF;
+  width: 342px;
+  padding: 30px;
+  position: relative;
+  bottom: 100px;
+}
+.ten-years-badge h2{
+text-align: center;
+font-size: 4rem;
+font-weight: 700;
+margin: 0;
+}
+.ten-years-badge p{
+font-size: 2rem;
+font-weight: 500;
+text-align: center;
+}
 /* finish features area */
 /* start facts area */
 .facts-title{
@@ -181,12 +239,22 @@ main{
   nav,
   .teams-container,
   .facts-card-container,
-  .sponsers-img-container
+  .sponsers-img-container,
+  .features
   {
     flex-direction: column;
   }
   nav > ul{
     flex-direction: column;
+  }
+  .features-img img{
+    width: 80%;
+    margin-left: 0;
+    align-items: center;
+  }
+  .ten-years-badge{
+    position: static;
+    width: 300px;
   }
   .teams-img-container{
     grid-template-columns: 1fr;
@@ -206,6 +274,7 @@ main{
     padding: 50px;
   }
   nav, 
+  .features
   .teams-container,
   .sponsers-img-container
   {
